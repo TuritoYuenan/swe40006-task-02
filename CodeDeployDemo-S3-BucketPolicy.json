@@ -1,0 +1,24 @@
+{
+	"Statement": [
+		{
+			"Action": "s3:PutObject",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::111122223333:root"
+			},
+			"Resource": "arn:aws:s3:::placeholder-dist/*"
+		},
+		{
+			"Action": [
+				"s3:Get*",
+				"s3:List*"
+			],
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "arn:aws:iam::111122223333:role/CodeDeployDemo-EC2-Instance-Profile"
+			},
+			"Resource": "arn:aws:s3:::placeholder-dist/*"
+		}
+	],
+	"Version": "2012-10-17"
+}

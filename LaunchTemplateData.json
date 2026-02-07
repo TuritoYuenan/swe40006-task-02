@@ -1,0 +1,31 @@
+{
+	"IamInstanceProfile": {
+		"Name": "EC2-Instance-Profile"
+	},
+	"ImageId": "ami-11112222333344440",
+	"InstanceType": "t2.micro",
+	"KeyName": "placeholder-keypair",
+	"NetworkInterfaces": [
+		{
+			"AssociatePublicIpAddress": true,
+			"DeleteOnTermination": true,
+			"DeviceIndex": 0,
+			"Groups": [
+				"sg-11112222333344440"
+			],
+			"Ipv6AddressCount": 0,
+			"SubnetId": "subnet-11112222333344440"
+		}
+	],
+	"TagSpecifications": [
+		{
+			"ResourceType": "instance",
+			"Tags": [
+				{
+					"Key": "Name",
+					"Value": "SWE40006_WordPress"
+				}
+			]
+		}
+	]
+}
